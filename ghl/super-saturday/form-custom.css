@@ -139,6 +139,21 @@ button.btn:hover {
   box-shadow: 0 14px 28px -10px rgba(20, 53, 54, .65) !important;
 }
 
+/* Force white text on the button AND anything inside it
+   (GHL wraps the button text in its own span/div with an inline colour) */
+#_builder-form button,
+#_builder-form button *,
+form button[type="submit"],
+form button[type="submit"] *,
+.btn.btn-dark,
+.btn.btn-dark *,
+button.btn *,
+.form-builder--item button * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
 /* ---------- Errors ---------- */
 .error,
 .error-msg,
