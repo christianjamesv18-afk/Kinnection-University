@@ -2,21 +2,10 @@
    Kinnection – Super Saturday 2026 Registration form
    Paste into: Form Builder > Styles panel > Advanced > Custom CSS
    Applies everywhere the form is used (inline embed + popup).
-   Colors were sampled from the funnel; replace the hex values
-   below with your exact brand codes if they differ.
+   No CSS variables: GHL scopes this CSS to the form, so :root
+   variables never resolve (that made the button/inputs blank).
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
-
-:root {
-  --k-teal: #1e4a4b;        /* primary / buttons / headings */
-  --k-teal-dark: #143536;   /* hover */
-  --k-gold: #c39a2e;        /* accent ("FREE") */
-  --k-sage: #eef3f1;        /* soft input background */
-  --k-border: #cfdcd8;
-  --k-text: #1f2d2d;
-  --k-muted: #5d6b6a;
-  --k-radius: 14px;
-}
 
 /* ---------- Form shell ---------- */
 #_builder-form,
@@ -24,7 +13,7 @@
 .ghl-form-wrap,
 form {
   font-family: 'Montserrat', sans-serif !important;
-  color: var(--k-text) !important;
+  color: #1f2d2d !important;
   background: #ffffff !important;
   border: none !important;
   box-shadow: none !important;
@@ -38,14 +27,14 @@ label,
   font-family: 'Montserrat', sans-serif !important;
   font-weight: 700 !important;
   font-size: 15px !important;
-  color: var(--k-teal) !important;
+  color: #1e4a4b !important;
   letter-spacing: .2px;
   margin-bottom: 8px !important;
 }
 /* required asterisk in gold */
 label span[style*="color"],
 .field-label .required,
-label .required { color: var(--k-gold) !important; }
+label .required { color: #c39a2e !important; }
 
 /* ---------- Inputs ---------- */
 input[type="text"],
@@ -60,10 +49,10 @@ textarea,
   font-family: 'Montserrat', sans-serif !important;
   font-size: 15px !important;
   font-weight: 500 !important;
-  color: var(--k-text) !important;
-  background: var(--k-sage) !important;
-  border: 1.5px solid var(--k-border) !important;
-  border-radius: var(--k-radius) !important;
+  color: #1f2d2d !important;
+  background: #eef3f1 !important;
+  border: 1.5px solid #cfdcd8 !important;
+  border-radius: 14px !important;
   padding: 14px 16px !important;
   min-height: 52px !important;
   box-shadow: none !important;
@@ -78,17 +67,17 @@ textarea:focus,
 .form-control:focus {
   outline: none !important;
   background: #ffffff !important;
-  border-color: var(--k-teal) !important;
+  border-color: #1e4a4b !important;
   box-shadow: 0 0 0 4px rgba(30, 74, 75, .15) !important;
 }
 
 /* email icon inside field */
 .form-builder--item svg,
-.input-group-text svg { color: var(--k-teal) !important; stroke: var(--k-teal) !important; }
+.input-group-text svg { color: #1e4a4b !important; stroke: #1e4a4b !important; }
 
 /* ---------- Consent checkboxes ---------- */
 input[type="checkbox"] {
-  accent-color: var(--k-teal);
+  accent-color: #1e4a4b;
   width: 20px !important;
   height: 20px !important;
   min-height: 20px !important;
@@ -105,7 +94,7 @@ input[type="checkbox"] {
   font-weight: 400 !important;
   font-size: 13px !important;
   line-height: 1.55 !important;
-  color: var(--k-muted) !important;
+  color: #5d6b6a !important;
   hyphens: none !important;          /* stops the "mes-sages" word splitting */
   -webkit-hyphens: none !important;
   word-break: normal !important;
@@ -121,9 +110,11 @@ button.btn {
   font-size: 17px !important;
   letter-spacing: .3px;
   color: #ffffff !important;
-  background: var(--k-teal) !important;
+  background: #1e4a4b !important;
+  background-color: #1e4a4b !important;
+  background-image: none !important;
   border: none !important;
-  border-radius: var(--k-radius) !important;
+  border-radius: 14px !important;
   padding: 18px 24px !important;
   min-height: 58px !important;
   width: 100% !important;
@@ -134,7 +125,8 @@ button.btn {
 button[type="submit"]:hover,
 .btn.btn-dark:hover,
 button.btn:hover {
-  background: var(--k-teal-dark) !important;
+  background: #143536 !important;
+  background-color: #143536 !important;
   transform: translateY(-1px);
   box-shadow: 0 14px 28px -10px rgba(20, 53, 54, .65) !important;
 }
