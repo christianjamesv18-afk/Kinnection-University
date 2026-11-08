@@ -1,0 +1,51 @@
+/* =========================================================
+   Kinnection – Super Saturday popup wrapper
+   Paste into: Funnel > Super Saturday step > Settings (gear)
+   > Custom CSS  (NOT the form builder).
+   Styles the popup box around the form so it matches the page
+   (removes the grey frame, rounds corners, branded close btn).
+   ========================================================= */
+#hl_main_popup,
+.hl_main_popup {
+  border: none !important;
+  border-radius: 24px !important;
+  padding: 32px 28px !important;
+  background: #ffffff !important;
+  box-shadow: 0 30px 80px -20px rgba(20, 53, 54, .45) !important;
+  overflow: hidden;
+}
+
+/* inner form wrapper: remove the extra card border/padding */
+#hl_main_popup .c-form,
+#hl_main_popup .form-builder--wrap,
+#hl_main_popup iframe {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* gold accent bar on top of the popup */
+#hl_main_popup::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, #1e4a4b, #c39a2e);
+}
+
+/* dimmed backdrop tinted with brand teal */
+.popup-body,
+.hl_main_popup_wrapper,
+#hl_main_popup_wrapper { background: rgba(20, 53, 54, .55) !important; backdrop-filter: blur(3px); }
+
+/* close button */
+.closeLPModal,
+#hl_main_popup .close-btn {
+  background: #1e4a4b !important;
+  color: #ffffff !important;
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25) !important;
+}
+
+@media (max-width: 600px) {
+  #hl_main_popup, .hl_main_popup { padding: 24px 16px !important; border-radius: 18px !important; }
+}

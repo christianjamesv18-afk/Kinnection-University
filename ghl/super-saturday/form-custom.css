@@ -1,0 +1,154 @@
+/* =========================================================
+   Kinnection – Super Saturday 2026 Registration form
+   Paste into: Form Builder > Styles panel > Advanced > Custom CSS
+   Applies everywhere the form is used (inline embed + popup).
+   Colors were sampled from the funnel; replace the hex values
+   below with your exact brand codes if they differ.
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --k-teal: #1e4a4b;        /* primary / buttons / headings */
+  --k-teal-dark: #143536;   /* hover */
+  --k-gold: #c39a2e;        /* accent ("FREE") */
+  --k-sage: #eef3f1;        /* soft input background */
+  --k-border: #cfdcd8;
+  --k-text: #1f2d2d;
+  --k-muted: #5d6b6a;
+  --k-radius: 14px;
+}
+
+/* ---------- Form shell ---------- */
+#_builder-form,
+.form-builder--wrap,
+.ghl-form-wrap,
+form {
+  font-family: 'Montserrat', sans-serif !important;
+  color: var(--k-text) !important;
+  background: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ---------- Labels ---------- */
+label,
+.field-label,
+.label-alignment,
+.form-builder--item label {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  color: var(--k-teal) !important;
+  letter-spacing: .2px;
+  margin-bottom: 8px !important;
+}
+/* required asterisk in gold */
+label span[style*="color"],
+.field-label .required,
+label .required { color: var(--k-gold) !important; }
+
+/* ---------- Inputs ---------- */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input.form-control,
+select,
+textarea,
+.iti input,
+.form-control {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--k-text) !important;
+  background: var(--k-sage) !important;
+  border: 1.5px solid var(--k-border) !important;
+  border-radius: var(--k-radius) !important;
+  padding: 14px 16px !important;
+  min-height: 52px !important;
+  box-shadow: none !important;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+}
+input::placeholder,
+textarea::placeholder { color: #8a9998 !important; font-weight: 400 !important; }
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+  outline: none !important;
+  background: #ffffff !important;
+  border-color: var(--k-teal) !important;
+  box-shadow: 0 0 0 4px rgba(30, 74, 75, .15) !important;
+}
+
+/* email icon inside field */
+.form-builder--item svg,
+.input-group-text svg { color: var(--k-teal) !important; stroke: var(--k-teal) !important; }
+
+/* ---------- Consent checkboxes ---------- */
+input[type="checkbox"] {
+  accent-color: var(--k-teal);
+  width: 20px !important;
+  height: 20px !important;
+  min-height: 20px !important;
+  padding: 0 !important;
+  border-radius: 5px !important;
+  margin-top: 3px !important;
+  cursor: pointer;
+}
+.option-container label,
+.checkbox-container label,
+.terms-and-conditions,
+.form-builder--item p {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  line-height: 1.55 !important;
+  color: var(--k-muted) !important;
+  hyphens: none !important;          /* stops the "mes-sages" word splitting */
+  -webkit-hyphens: none !important;
+  word-break: normal !important;
+}
+
+/* ---------- Submit button ---------- */
+button[type="submit"],
+.btn.btn-dark,
+.form-builder--item button,
+button.btn {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 17px !important;
+  letter-spacing: .3px;
+  color: #ffffff !important;
+  background: var(--k-teal) !important;
+  border: none !important;
+  border-radius: var(--k-radius) !important;
+  padding: 18px 24px !important;
+  min-height: 58px !important;
+  width: 100% !important;
+  box-shadow: 0 10px 24px -10px rgba(20, 53, 54, .55) !important;
+  transition: background .2s, transform .15s, box-shadow .2s;
+  cursor: pointer;
+}
+button[type="submit"]:hover,
+.btn.btn-dark:hover,
+button.btn:hover {
+  background: var(--k-teal-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px -10px rgba(20, 53, 54, .65) !important;
+}
+
+/* ---------- Errors ---------- */
+.error,
+.error-msg,
+.text-danger { color: #b3261e !important; font-size: 12px !important; font-weight: 600 !important; }
+input.error,
+.form-control.is-invalid { border-color: #b3261e !important; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  label, .field-label { font-size: 14px !important; }
+  input, select, textarea, .form-control { font-size: 16px !important; } /* prevents iOS zoom */
+  button[type="submit"], button.btn { font-size: 16px !important; }
+}
