@@ -1,0 +1,13 @@
+/* Super Saturday form – ONLY makes the submit button text white.
+   Paste into: Form Builder > Styles panel > Advanced > Custom CSS */
+#_builder-form button,
+#_builder-form button *,
+form button[type="submit"],
+form button[type="submit"] *,
+.btn.btn-dark,
+.btn.btn-dark *,
+button.btn,
+button.btn * {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
