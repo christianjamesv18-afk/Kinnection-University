@@ -152,6 +152,7 @@ button.btn *,
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
   fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 /* ---------- Errors ---------- */
